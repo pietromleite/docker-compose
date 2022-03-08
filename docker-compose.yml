@@ -5,8 +5,8 @@ services:
     restart: unless-stopped
     image: docker.io/bitnami/wordpress-nginx:5
     ports:
-      - "0.0.0.0:80:80"
-      - "0.0.0.0:443:443" 
+      - '80:80'
+      - '443:443' 
     volumes:
        - wordpress: ./var/www/html
     environment:
