@@ -58,7 +58,7 @@ services:
       - NGINX_CONF:/etc/nginx/conf.d/default.conf
       - NGINX_SSL_CERTS:/etc/ssl:ro
       - NGINX_LOGS:/var/log/nginx
- volumes:
+  volumes:
   wordpress:
     driver: local
   database:
