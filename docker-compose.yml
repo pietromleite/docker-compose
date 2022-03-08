@@ -3,7 +3,7 @@ services:
   wordpress:
     container_name: wordpress-pietro
     restart: unless-stopped
-    image: wordpress:latest
+    image: docker.io/bitnami/wordpress-nginx:5
      ports:
       - "0.0.0.0:80:80"
       - "0.0.0.0:443:443" 
