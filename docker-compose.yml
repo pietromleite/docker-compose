@@ -1,20 +1,21 @@
-version: '1'
-services:
-  wordpress:
+version: "1"
+services: 
+  wordpress: 
     container_name: wordpress-pietro
-    restart: unless-stopped
-    image: docker.io/bitnami/wordpress-nginx:5
-    ports:
-      - '80:80'
-      - '443:443' 
-    volumes:
-       - wordpress: ./var/www/html
-    environment:
+    environment: 
       - WORDPRESS_DATABASE_HOST=wordpress.ccjvfewblenh.us-east-1.rds.amazonaws.com
       - WORDPRESS_DATABASE_PORT=3306
       - WORDPRESS_DATABASE_USER=wordpress_pietro
       - WORDPRESS_DATABASE_NAME=wordpress
       - WORDPRESS_DATABASE_PASSWORD=wordpress123
-volumes:
-  wordpress:
+    image: "docker.io/bitnami/wordpress-nginx:5"
+    ports: 
+      - "80:80"
+      - "443:443"
+    restart: unless-stopped
+    volumes: 
+      - 
+        wordpress: ./var/www/html
+volumes: 
+  wordpress: 
     external: true
