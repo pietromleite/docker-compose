@@ -7,8 +7,8 @@ services:
      ports:
       - "0.0.0.0:80:80"
       - "0.0.0.0:443:443" 
-       volumes:
-      - wordpress: ./var/www/html
+     volumes:
+       - wordpress: ./var/www/html
       environment:
       - WORDPRESS_DATABASE_HOST=wordpress.ccjvfewblenh.us-east-1.rds.amazonaws.com
       - WORDPRESS_DATABASE_PORT=3306
