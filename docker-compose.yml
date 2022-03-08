@@ -59,9 +59,9 @@ services:
       - NGINX_SSL_CERTS:/etc/ssl:ro
       - NGINX_LOGS:/var/log/nginx
  volumes:
-  MYSQL_LOCAL_HOME:
+  wordpress:
     driver: local
-  WORDPRESS_LOCAL_HOME:
+  database:
     driver: local
 
   # adminer - bring up only as needed - bypasses nginx
