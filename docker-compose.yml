@@ -4,12 +4,12 @@ services:
     container_name: wordpress-pietro
     restart: unless-stopped
     image: docker.io/bitnami/wordpress-nginx:5
-     ports:
+    ports:
       - "0.0.0.0:80:80"
       - "0.0.0.0:443:443" 
-     volumes:
+    volumes:
        - wordpress: ./var/www/html
-      environment:
+    environment:
       - WORDPRESS_DATABASE_HOST=wordpress.ccjvfewblenh.us-east-1.rds.amazonaws.com
       - WORDPRESS_DATABASE_PORT=3306
       - WORDPRESS_DATABASE_USER=wordpress_pietro
