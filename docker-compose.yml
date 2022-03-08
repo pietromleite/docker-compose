@@ -5,7 +5,7 @@ services:
     # default port 9000 (FastCGI)
     image: wordpress:5-fpm
     container_name: wp-wordpress
-    env_file:
+    #env_file:
       #- .env
     restart: unless-stopped
     networks:
@@ -24,7 +24,7 @@ services:
     # default port 3306
     image: mysql:8
     container_name: wp-database
-    env_file:
+    #env_file:
       #- .env
     restart: unless-stopped
     networks:
@@ -43,7 +43,7 @@ services:
     # default ports 80, 443 - expose mapping as needed to host
     image: nginx:1
     container_name: wp-nginx
-    env_file:
+    #env_file:
      #- .env
     restart: unless-stopped
     networks:
@@ -58,6 +58,11 @@ services:
       - NGINX_CONF:/etc/nginx/conf.d/default.conf
       - NGINX_SSL_CERTS:/etc/ssl:ro
       - NGINX_LOGS:/var/log/nginx
+ volumes:
+  MYSQL_LOCAL_HOME:
+    driver: local
+  WORDPRESS_LOCAL_HOME:
+    driver: local
 
   # adminer - bring up only as needed - bypasses nginx
 #  adminer:
