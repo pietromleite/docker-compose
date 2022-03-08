@@ -15,7 +15,6 @@ services:
       - WORDPRESS_DATABASE_USER=wordpress_pietro
       - WORDPRESS_DATABASE_NAME=wordpress
       - WORDPRESS_DATABASE_PASSWORD=wordpress123
-
 volumes:
   wordpress:
     external: true
