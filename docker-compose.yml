@@ -1,4 +1,4 @@
-version: "1"
+--- 
 services: 
   wordpress: 
     container_name: wordpress-pietro
@@ -16,6 +16,8 @@ services:
     volumes: 
       - 
         wordpress: ./var/www/html
+version: "1"
 volumes: 
   wordpress: 
     external: true
+
