@@ -6,7 +6,7 @@ services:
     image: wordpress:5-fpm
     container_name: wp-wordpress
     env_file:
-      - .env
+      - env.template
     restart: unless-stopped
     networks:
       - wordpress
@@ -27,7 +27,7 @@ services:
     image: mysql:8
     container_name: wp-database
     env_file:
-      - .env
+      - env.template
     restart: unless-stopped
     networks:
       - wordpress
@@ -46,7 +46,7 @@ services:
     image: nginx:1
     container_name: wp-nginx
     env_file:
-      - .env
+      - env.template
     restart: unless-stopped
     networks:
       - wordpress
