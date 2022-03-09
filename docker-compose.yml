@@ -14,7 +14,7 @@ services:
       - database
     volumes:
       - ${WORDPRESS_LOCAL_HOME}:/var/www/html
-      - ${WORDPRESS_UPLOADS_CONFIG}:/usr/local/etc/php/conf.d/uploads.ini
+      # - ${WORDPRESS_UPLOADS_CONFIG}:/usr/local/etc/php/conf.d/uploads.ini
       # - /path/to/repo/myTheme/:/var/www/html/wp-content/themes/myTheme
     environment:
       - WORDPRESS_DB_HOST=${WORDPRESS_DB_HOST}
