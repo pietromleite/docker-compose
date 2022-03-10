@@ -1,24 +1,24 @@
-versão: "3.8"
-Serviços:
+version: "3.8"
+services:
     wordpress:
         container_name: wordpress
-        imagem: wordpress:php8.1-apache
-        reiniciar: sempre
+        image: wordpress:php8.1-apache
+        restart: always
         stdin_open: true
-        tty: verdade
-        meio Ambiente:
-            WORDPRESS_DB_HOST:  CLOUDSQL_IP 
-            WORDPRESS_DB_USER:  database_user 
-            WORDPRESS_DB_PASSWORD:  database_user_password 
-            WORDPRESS_DB_NAME:  database_name
+        tty: true
+        environment:
+            WORDPRESS_DB_HOST: CLOUDSQL_IP
+            WORDPRESS_DB_USER: database_user
+            WORDPRESS_DB_PASSWORD: database_user_password
+            WORDPRESS_DB_NAME: database_name
         volumes:
             - ./wordpress:/var/www/html
        
     nginx:
         container_name: nginx
-        imagem: nginx:latest
-        reiniciar: a menos que parado
-        portas:
+        image: nginx:latest
+        restart: unless-stopped
+        ports:
             - 80:80
             - 443:443
         volumes:
@@ -28,9 +28,9 @@ Serviços:
 
     certbot:
         container_name: certbot
-        imagem: certbot/certbot:latest
-        comando: certonly --webroot --webroot-path=/var/www/html --email  youremail@domain.com  --agree-tos --no-eff-email -d  domain.com -d www.domain.com
+        image: certbot/certbot:latest
+        command: certonly --webroot --webroot-path=/var/www/html --email youremail@domain.com --agree-tos --no-eff-email -d domain.com -d www.domain.com
         volumes:
             - ./certbot/conf:/etc/letsencrypt
             - ./certbot/logs:/var/log/letsencrypt
-            - ./certbot/data:/var/www/html
+            - ./certbot/data:/var/www/html 
