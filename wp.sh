@@ -83,6 +83,8 @@ echo " Status "
 echo " ================================================================== "
 docker ps -a
 sleep 2
+curl http://localhost
+sleep 2
 echo " =================================================================="
 echo "Opa, deu tudo certo! Acesse seudomínio.com.br/wp-admin via navegador"
 echo " para finalizar a instalação =D "
