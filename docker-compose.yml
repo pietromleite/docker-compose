@@ -7,10 +7,10 @@ services:
         stdin_open: true
         tty: true
         environment:
-            WORDPRESS_DB_HOST: CLOUDSQL_IP
-            WORDPRESS_DB_USER: database_user
-            WORDPRESS_DB_PASSWORD: database_user_password
-            WORDPRESS_DB_NAME: database_name
+            WORDPRESS_DB_HOST: wordpress.ccjvfewblenh.us-east-1.rds.amazonaws.com
+            WORDPRESS_DB_USER: wordpress_pietro
+            WORDPRESS_DB_PASSWORD: wordpress123
+            WORDPRESS_DB_NAME: wordpress
         volumes:
             - ./wordpress:/var/www/html
        
@@ -29,7 +29,7 @@ services:
     certbot:
         container_name: certbot
         image: certbot/certbot:latest
-        command: certonly --webroot --webroot-path=/var/www/html --email youremail@domain.com --agree-tos --no-eff-email -d domain.com -d www.domain.com
+        command: certonly --webroot --webroot-path=/var/www/html --email youremail@domain.com --agree-tos --no-eff-email -d ec2-52-90-163-209.compute-1.amazonaws.com -d www.ec2-52-90-163-209.compute-1.amazonaws.com
         volumes:
             - ./certbot/conf:/etc/letsencrypt
             - ./certbot/logs:/var/log/letsencrypt
