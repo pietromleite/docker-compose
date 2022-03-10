@@ -68,8 +68,7 @@ echo " OK "
 sudo chown ec2-user:ec2-user /home/ec2-user/wordpress-docker -R
 sleep 2
 echo " OK "
-cd ~/wordpress-docker
-sudo curl -sSL  https://raw.githubusercontent.com/pietromleite/docker-compose/main/wordpress.conf > wordpress.conf
+sudo curl -sSL  https://raw.githubusercontent.com/pietromleite/docker-compose/main/wordpress.conf > nginx/wordpress.conf
 echo " OK "
 sleep 1
 echo " ================================================================== "
