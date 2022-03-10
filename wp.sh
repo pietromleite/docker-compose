@@ -65,7 +65,7 @@ echo " ================================================================== "
 sudo chown ec2-user:ec2-user /home/ec2-user -R
 sleep 2
 echo " OK "
-sudo chown ec2-user:ec2-user /home/ec2-user/wordpress-docker/ -R
+sudo chown ec2-user:ec2-user /home/ec2-user/wordpress-docker -R
 sleep 2
 echo " OK "
 cd wordpress-docker
