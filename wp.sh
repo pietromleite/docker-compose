@@ -38,6 +38,7 @@ echo " ================================================================== "
 echo " Definição de permissões "
 echo " ================================================================== "
 sudo chmod +x /usr/local/bin/docker-compose
+echo " OK "
 sleep 1
 echo " ================================================================== "
 echo " Testando o docker-compose "
@@ -58,11 +59,13 @@ echo " Configurando Ngix "
 echo " ================================================================== "
 sudo chown ec2-user:ec2-user /home/ec2-user -R
 sudo curl -sSL  https://raw.githubusercontent.com/pietromleite/docker-compose/main/wordpress.conf > wordpress.conf
+echo " OK "
 sleep 1
 echo " ================================================================== "
 echo " Configurando Docker-Compose "
 echo " ================================================================== "
 sudo curl -sSL https://raw.githubusercontent.com/pietromleite/docker-compose/main/docker-compose.yml > docker-compose.yml
+echo " OK "
 echo " ================================================================== "
 echo " Executando Docker-Compose "
 echo " ================================================================== "
