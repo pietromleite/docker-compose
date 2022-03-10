@@ -30,7 +30,7 @@ echo " ================================================================== "
 sudo service docker start
 sleep 2
 echo " OK "
-sudo chmod 775 /var/run/docker.sock
+sudo chmod 666 /var/run/docker.sock
 echo " OK "
 docker info
 sleep 2
