@@ -44,6 +44,7 @@ echo " ================================================================== "
 echo " Testando o docker-compose "
 echo " ================================================================== "
 docker-compose --version
+echo " OK "
 sleep 2
 echo " ================================================================== "
 echo " Iniciando instalação (Wordpress / Nginx) "
