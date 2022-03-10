@@ -24,9 +24,10 @@ echo " ================================================================== "
 sudo usermod -aG docker ec2-user
 echo " OK "
 echo " ================================================================== "
-echo " Informações Docker "
+echo " Iniciando e informações Docker "
 echo " ================================================================== "
-sudo chmod 666 /var/run/docker.sock
+sudo service docker start
+sudo chmod 775 /var/run/docker.sock
 docker info
 sleep 2
 echo " ================================================================== "
