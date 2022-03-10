@@ -23,6 +23,7 @@ echo " Adicionar o usuario ao Grupo Docker "
 echo " ================================================================== "
 sudo usermod -aG docker ec2-user
 echo " OK "
+sleep 1
 echo " ================================================================== "
 echo " Iniciando e informações Docker "
 echo " ================================================================== "
