@@ -28,9 +28,10 @@ echo " ================================================================== "
 echo " Iniciando e informações Docker "
 echo " ================================================================== "
 sudo service docker start
-sleep 2
+sleep 3
 echo " OK "
 sudo chmod 666 /var/run/docker.sock
+sleep 3
 echo " OK "
 docker info
 sleep 2
