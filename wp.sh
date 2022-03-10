@@ -62,7 +62,7 @@ sleep 1
 echo " ================================================================== "
 echo " Configurando Ngix "
 echo " ================================================================== "
-sudo chown ec2-user:ec2-user /home/ec2-user -R
+#sudo chown ec2-user:ec2-user /home/ec2-user -R
 sudo curl -sSL  https://raw.githubusercontent.com/pietromleite/docker-compose/main/wordpress.conf > wordpress.conf
 echo " OK "
 sleep 1
