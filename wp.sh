@@ -80,7 +80,7 @@ echo " ================================================================== "
 echo " Executando Docker-Compose "
 echo " ================================================================== "
 cd ~/wordpress-docker
-docker-compose up
+docker-compose up -d
 sleep 2
 echo " ================================================================== "
 echo " Status "
