@@ -7,8 +7,8 @@ services:
      ports:
          - '9000:9000'
      environment:
-       WORDPRESS_DB_HOST: db-wordpress.ccjvfewblenh.us-east-1.rds.amazonaws.com
-       WORDPRESS_DB_NAME: db-wordpress
+       WORDPRESS_DB_HOST: wordpress.ccjvfewblenh.us-east-1.rds.amazonaws.com
+       WORDPRESS_DB_NAME: wordpress
        WORDPRESS_DB_USER: wordpress_pietro
        WORDPRESS_DB_PASSWORD: wordpress123
      volumes:
@@ -34,5 +34,5 @@ services:
      ports:
        - 3333:80
      environment:
-       PMA_HOST: db-wordpress.ccjvfewblenh.us-east-1.rds.amazonaws.com
+       PMA_HOST: wordpress.ccjvfewblenh.us-east-1.rds.amazonaws.com
        MYSQL_ROOT_PASSWORD: wordpress_pietro
