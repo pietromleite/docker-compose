@@ -15,14 +15,7 @@ echo " ================================================================== "
 echo " Start - Instalação Docker "
 echo " ================================================================== "
 sudo yum update
-sudo yum install apt-transport-https ca-certificates curl software-properties-common
 sudo yum install -y docker
-sleep 1
-echo " ================================================================== "
-echo " Adicionar o usuario ao Grupo Docker "
-echo " ================================================================== "
-sudo usermod -aG docker ec2-user
-echo " OK "
 sleep 1
 echo " ================================================================== "
 echo " Iniciando e informações Docker "
@@ -30,11 +23,17 @@ echo " ================================================================== "
 sudo service docker start
 sleep 3
 echo " OK "
+sleep 1
 sudo chmod 666 /var/run/docker.sock
 sleep 3
 echo " OK "
 docker info
 sleep 2
+echo " ================================================================== "
+echo " Adicionar o usuario ao Grupo Docker "
+echo " ================================================================== "
+sudo usermod -aG docker ec2-user
+echo " OK "
 echo " ================================================================== "
 echo " Instalação do Docker Compose "
 echo " ================================================================== "
